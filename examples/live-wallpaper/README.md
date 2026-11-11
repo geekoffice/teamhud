@@ -26,8 +26,8 @@ dots, dashes and underscores. Files over 64 KB, or without the header below, are
 The file has two parts.
 
 **1. The header** (a JSON block in the first comment) names the wallpaper and declares options.
-Each `number` option becomes a slider in the preview panel (`boolean` becomes a checkbox,
-`color` a colour field). Up to 24 options.
+Each `number` option becomes a slider in the preview panel. Stick to `number` options: the runtime passes only numbers
+to the shader, so a `boolean` or `color` option may not reach it (unverified, and the docs disagree). Up to 24 options.
 
 ```wgsl
 /* @teamhud-shader {
@@ -80,3 +80,7 @@ Want something that reacts to the overlay instead? Read the hubs from `ws` (each
 `vec4`s: position, size, merge hints, colour). The full contract lives with the shader runtime in
 the TeamHUD source; custom widgets with `"chrome": "surface"` are the other way to make ambient,
 non-clickable visuals.
+
+## Licence
+
+MIT, see [LICENSING.md](../../LICENSING.md). This covers these files only, not the TeamHUD app.

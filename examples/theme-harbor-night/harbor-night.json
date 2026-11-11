@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "1.0",
+  "kind": "teamhud-theme",
+  "name": "Harbor Night",
+  "description": "Deep slate panels with a warm lantern accent. Sample colours, checked for readable contrast.",
+  "creator": "TeamHUD community examples",
+  "bundle": {
+    "id": "harbor-night",
+    "label": "Harbor Night",
+    "description": "Deep slate panels with a warm lantern accent.",
+    "accentTuning": { "paletteId": "custom", "customColor": "#e8a23a" },
+    "uiDensityTuning": { "mode": "normal", "baseSizePx": 14, "fontFamily": "inter" },
+    "panelGlassTuning": {
+      "idleOpacity": 0.88,
+      "activeOpacity": 1,
+      "panelRadiusPx": 12,
+      "panelBg": "#141b26",
+      "panelBorder": "#2b3a4d",
+      "textColor": "#e6edf5",
+      "textSecondary": "#a9b6c6",
+      "linkColor": "#8cc4ff",
+      "success": "#5cc98a",
+      "warning": "#e8b84a",
+      "danger": "#ef7471",
+      "info": "#6fb3e8"
+    },
+    "hubElementTuning": {
+      "borderRadiusPercent": 30,
+      "backgroundColor": "#1d2a3a",
+      "iconColor": "#f3c47a"
+    },
+    "activeStyle": { "chromeId": "circle", "backdropId": "none" }
+  }
+}

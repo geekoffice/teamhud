@@ -1,0 +1,20 @@
+{
+  "kind": "teamhud-sound-pack",
+  "schemaVersion": "1.0",
+  "name": "Pebble",
+  "pack": {
+    "label": "Pebble",
+    "description": "Soft, woody two-note cues. Rising means someone arrived, falling means someone left.",
+    "creator": "TeamHUD community examples",
+    "events": {
+      "localJoin": { "enabled": true, "volume": 0.9, "source": { "kind": "file", "src": "join.wav", "name": "Pebble join" } },
+      "localLeave": { "enabled": true, "volume": 0.9, "source": { "kind": "file", "src": "leave.wav", "name": "Pebble leave" } },
+      "peerJoin": { "enabled": true, "volume": 0.75, "source": { "kind": "file", "src": "peer-join.wav", "name": "Pebble teammate joined" } },
+      "peerLeave": { "enabled": true, "volume": 0.75, "source": { "kind": "file", "src": "peer-leave.wav", "name": "Pebble teammate left" } },
+      "callInvite": { "enabled": true, "volume": 1, "source": { "kind": "file", "src": "ring.wav", "name": "Pebble ring" } },
+      "messageReceived": { "enabled": true, "volume": 0.6, "source": { "kind": "file", "src": "message.wav", "name": "Pebble knock" } },
+      "selfMute": { "enabled": true, "volume": 0.7, "source": { "kind": "tone", "tone": { "kind": "blip", "freq": 392, "durationMs": 90, "wave": "triangle" } } },
+      "selfUnmute": { "enabled": true, "volume": 0.7, "source": { "kind": "tone", "tone": { "kind": "blip", "freq": 523.25, "durationMs": 90, "wave": "triangle" } } }
+    }
+  }
+}

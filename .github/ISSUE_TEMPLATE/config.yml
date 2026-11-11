@@ -1,7 +1,7 @@
 blank_issues_enabled: false
 contact_links:
   - name: Quick question or chat? Ask on Discord
-    url: https://discord.gg/mpbKeaveES
+    url: https://discord.gg/AaD9evY5RG
     about: For questions, help and ideas that aren't a bug, the community Discord is faster.
   - name: Report a security problem
     url: https://github.com/geekoffice/teamhud/security/policy

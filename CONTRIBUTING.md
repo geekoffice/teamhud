@@ -11,3 +11,5 @@ Thanks for helping. The most useful things right now:
 - **Ideas.** Use the [feature form](../../issues/new/choose), or talk it over in Discord first.
 
 By contributing you agree your contribution can be shared under this repository's licence.
+
+Contributions are licensed under the MIT licence; see [LICENSING.md](LICENSING.md).

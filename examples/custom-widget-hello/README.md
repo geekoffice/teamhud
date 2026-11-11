@@ -82,3 +82,7 @@ If your widget needs more, declare it in `permissions` and expect the user to be
 
 Ask for the least you need. Changing the permissions in `widget.json` makes TeamHUD ask the
 user again; changing only your HTML does not.
+
+## Licence
+
+MIT, see [LICENSING.md](../../LICENSING.md). This covers these files only, not the TeamHUD app.
