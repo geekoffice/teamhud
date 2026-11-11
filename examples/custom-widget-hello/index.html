@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Hello Community</title>
+    <!-- Shared design-system assets served by TeamHUD to every local widget:
+         pre-themed th-* elements (th-section, th-kv-row, th-btn, th-chip). -->
+    <script type="module" src="teamhud-widget://_shared/widget-bundle.js"></script>
+    <style>
+      /* TeamHUD injects every --th-* token (and updates them live when the user
+         changes theme, accent or density). The fallbacks only matter when you
+         open this file in a plain browser. */
+      body {
+        margin: 0;
+        font-family: var(--th-font-ui, system-ui, sans-serif);
+        font-size: var(--th-text-md, 0.8rem);
+        color: var(--th-text-primary, CanvasText);
+      }
+      #app {
+        display: flex;
+        flex-direction: column;
+        gap: var(--th-space-3, 0.5rem);
+        padding: calc(var(--th-u, 0.6rem) * 1.2);
+      }
+      h1 {
+        margin: 0;
+        font-size: var(--th-text-lg, 1rem);
+        font-weight: var(--th-font-semibold, 600);
+        color: var(--th-accent, inherit);
+      }
+      .count {
+        font-variant-numeric: tabular-nums;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Anything clickable must sit inside an element with class
+         "teamhud-interactive"; the rest of the overlay stays click-through. -->
+    <div id="app" class="teamhud-interactive">
+      <h1 id="greeting">Hello, team!</h1>
+      <th-section label="Counter">
+        <th-kv-row label="Clicks"><span class="count" id="count">0</span></th-kv-row>
+      </th-section>
+      <th-btn variant="primary" id="bump">Click me</th-btn>
+    </div>
+
+    <script>
+      let clicks = 0;
+      const countEl = document.getElementById('count');
+      document.getElementById('bump').addEventListener('click', () => {
+        clicks += 1;
+        countEl.textContent = String(clicks);
+      });
+
+      // Settings declared in widget.json are edited by the user in the hub menu or
+      // Preferences. get() resolves to { greeting: "..." }; onChange fires on edits.
+      const greetingEl = document.getElementById('greeting');
+      const applySettings = (values) => {
+        if (values && typeof values.greeting === 'string') greetingEl.textContent = values.greeting;
+      };
+      const settings = window.teamhud && window.teamhud.settings;
+      if (settings) {
+        settings.get().then(applySettings).catch(() => {});
+        settings.onChange(applySettings);
+      }
+    </script>
+  </body>
+</html>

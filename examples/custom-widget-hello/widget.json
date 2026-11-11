@@ -1,0 +1,19 @@
+{
+  "name": "Hello Community",
+  "description": "A minimal custom widget: a greeting you can change in its settings and a click counter.",
+  "html": "index.html",
+  "icon": "icon.svg",
+  "tags": ["example"],
+  "size": { "width": 280, "height": 200 },
+  "permissions": {
+    "backend": false,
+    "node": [],
+    "network": false
+  },
+  "settings": [
+    { "key": "greeting", "type": "string", "label": "Greeting", "default": "Hello, team!" }
+  ],
+  "defaults": {
+    "position": { "fx": 0.9, "fy": 0.12 }
+  }
+}

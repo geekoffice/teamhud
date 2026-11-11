@@ -1,0 +1,107 @@
+name: Bug report
+description: Something in TeamHUD isn't working
+labels: ["bug", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Fastest way:** in TeamHUD, open the tray menu → **Submit Feedback…**. It attaches your version, OS and logs for you.
+        Use this form if you can't, or want it tracked publicly. Please don't include passwords, tokens or other people's private messages.
+  - type: dropdown
+    id: area
+    attributes:
+      label: Where is the problem?
+      options:
+        - Voice / video calls
+        - Screen sharing
+        - Messages (TeamHUD chat or Slack in the panel)
+        - Quest log
+        - Resources
+        - AI chat / assistant
+        - Overlay / hub / panel layout
+        - Sign-in / account / team
+        - Install or update
+        - Custom widget or plugin
+        - Live wallpaper
+        - Other
+    validations:
+      required: true
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Your computer
+      options:
+        - macOS (Apple Silicon)
+        - macOS (Intel)
+        - Windows 11
+        - Windows 10
+        - Linux (Ubuntu / Debian)
+        - Linux (Fedora)
+        - Linux (other)
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: TeamHUD version
+      description: Shown in the Submit Feedback window, or in the file name you downloaded.
+      placeholder: "1.0.0-alpha.1"
+    validations:
+      required: true
+  - type: input
+    id: os_version
+    attributes:
+      label: OS version (and Linux distro / desktop, if relevant)
+      placeholder: "macOS 15.1 · Windows 11 23H2 · Fedora 42 GNOME on Wayland"
+  - type: textarea
+    id: steps
+    attributes:
+      label: What did you do?
+      description: Numbered steps, so someone else can repeat it.
+      placeholder: |
+        1. Join the team call
+        2. Start a screen share
+        3. ...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect to happen?
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: What happened instead?
+      description: Drag in a screenshot or short clip if you can. Blur anything private.
+    validations:
+      required: true
+  - type: dropdown
+    id: frequency
+    attributes:
+      label: How often?
+      options:
+        - Every time
+        - Sometimes
+        - Happened once
+    validations:
+      required: true
+  - type: dropdown
+    id: blocking
+    attributes:
+      label: How much does it get in your way?
+      options:
+        - Can't use TeamHUD / data loss
+        - A main feature is broken
+        - Annoying, there's a workaround
+        - Cosmetic
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: Before you send
+      options:
+        - label: I searched existing issues and didn't find this one.
+          required: true
+        - label: I removed passwords, tokens and other people's private content from anything I attached.
+          required: true

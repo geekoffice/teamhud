@@ -1,0 +1,46 @@
+name: Feature request
+description: An idea that would make TeamHUD better
+labels: ["enhancement", "needs-triage"]
+body:
+  - type: dropdown
+    id: area
+    attributes:
+      label: Which part is this about?
+      options:
+        - Voice / video calls
+        - Screen sharing
+        - Messages
+        - Quest log
+        - Resources
+        - AI chat / assistant
+        - Overlay / hub / panel layout
+        - Custom widgets / plugins
+        - Live wallpapers
+        - Something new
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What are you trying to do, and what gets in the way today?
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: What would you like to happen?
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Anything you do instead right now?
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Which computers does this matter on?
+      multiple: true
+      options:
+        - macOS
+        - Windows
+        - Linux

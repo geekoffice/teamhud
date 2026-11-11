@@ -1,0 +1,69 @@
+name: Plugin, custom widget or wallpaper problem
+description: A problem with something you built or installed (plugin, custom widget, live wallpaper)
+labels: ["extension", "needs-triage"]
+body:
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What is it?
+      options:
+        - Custom widget
+        - Plugin
+        - Live wallpaper
+    validations:
+      required: true
+  - type: dropdown
+    id: source
+    attributes:
+      label: Where did it come from?
+      options:
+        - One of the examples in this repo
+        - I made it
+        - Someone else made it
+    validations:
+      required: true
+  - type: input
+    id: name
+    attributes:
+      label: Name (and link, if public)
+    validations:
+      required: true
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Your computer
+      options:
+        - macOS (Apple Silicon)
+        - macOS (Intel)
+        - Windows 11
+        - Windows 10
+        - Linux
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: TeamHUD version
+      placeholder: "1.0.0-alpha.1"
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What goes wrong?
+      description: Include any error message, and what you changed since it last worked.
+    validations:
+      required: true
+  - type: textarea
+    id: manifest
+    attributes:
+      label: Manifest / config (remove secrets)
+      render: json
+  - type: dropdown
+    id: perf
+    attributes:
+      label: Is it about speed or battery?
+      options:
+        - No
+        - Yes — high CPU/GPU or fan noise
+        - Yes — stutters or drops frames
